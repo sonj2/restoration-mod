@@ -1,10 +1,30 @@
 <table directory="assets">
 	<!--Ask Luffy to implement checks you can add to entries in add.xml to help with optimization, also ask Luffy
-	to make a check to see if specified mod option/game option is on/off ~Martini-->
+	to make a check to see if specified mod option/game option is on/off ~Rhynne-->
 	
-	<!--We'll have manual stuff at the top here since I don't like to scroll-->
-	<texture path="guis/textures/restoration/ingame_manual/page_1"/>
-	<!--End of manual stuff, carry on-->
+	<!--Font fix because perfection is key-->
+	<font path="fonts/font_medium_shadow" force="true"/>
+	<merged_font path="fonts/font_medium_shadow_mf" force="true"/>
+	<merged_font path="fonts/font_large_mf" force="true"/>
+	<font path="fonts/font_medium" force="true"/>
+	<merged_font path="fonts/font_medium_mf" force="true"/>
+	<font path="fonts/font_medium_noshadow" force="true"/>
+	<merged_font path="fonts/font_medium_noshadow_mf" force="true"/>
+	<font path="fonts/font_medium_buttons" force="true"/>
+	<merged_font path="fonts/font_medium_buttons_mf" force="true"/>
+	<font path="fonts/font_medium_buttons_old_ps3" force="true"/>
+	<merged_font path="fonts/font_medium_buttons_old_ps3_mf" force="true"/>
+	<font path="fonts/font_small" force="true"/>
+	<merged_font path="fonts/font_small_mf" force="true"/>
+	<font path="fonts/font_small_buttons" force="true"/>
+	<merged_font path="fonts/font_small_buttons_mf" force="true"/>
+	<font path="fonts/font_small_buttons_old_ps3" force="true"/>
+	<merged_font path="fonts/font_small_buttons_old_ps3_mf" force="true"/>
+	<font path="fonts/font_small_noshadow" force="true"/>
+	<merged_font path="fonts/font_small_noshadow_mf" force="true"/>
+	<font path="fonts/font_large_buttons" force="true"/>
+	<font path="fonts/font_eroded" force="true"/>
+	<!--f-->
 	<texture path="guis/textures/restoration/hud_icons"/>
 	<texture path="guis/textures/restoration/icon_carrybag"/>
 	<texture path="guis/textures/restoration/hud_health"/>
