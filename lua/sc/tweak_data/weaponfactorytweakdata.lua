@@ -46293,6 +46293,16 @@ self.wpn_fps_ass_osipr.uses_parts = {
 		"wpn_fps_upg_i_faster_rof"
 	})
 
+	if self.parts.mod_shield then --Mx's Predator Shield mod ver.
+		self.parts.mod_shield.stats = {
+			concealment = -15,
+			extra_ammo = -6, --temporary measure to reduce mag size. Multiplier would be much better
+			suppression = 0,
+			spread = 1,
+			recoil = 2
+		}
+	end
+
 	--Incendiary Slugs are awesome--
 
 	local colt_weapons = {
