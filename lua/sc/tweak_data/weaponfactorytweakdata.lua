@@ -46299,7 +46299,8 @@ self.wpn_fps_ass_osipr.uses_parts = {
 			extra_ammo = -6, --temporary measure to reduce mag size. Multiplier would be much better
 			suppression = 0,
 			spread = 1,
-			recoil = 2
+			recoil = 2,
+			zoom = 4
 		}
 	end
 
