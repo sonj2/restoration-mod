@@ -46302,6 +46302,7 @@ self.wpn_fps_ass_osipr.uses_parts = {
 			recoil = 2,
 			zoom = 4
 		}
+		self.parts.mod_shield.exclude_weapon = {"mp5"}
 	end
 
 	--Incendiary Slugs are awesome--

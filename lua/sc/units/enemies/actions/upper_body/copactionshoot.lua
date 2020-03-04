@@ -1211,13 +1211,8 @@ function CopActionShoot:check_melee_start(t, attention, target_dis, autotarget, 
 			local obstructed_by_geometry = self._unit:raycast("ray", shoot_from_pos, melee_vec1, "sphere_cast_radius", 20, "slot_mask", managers.slot:get_mask("world_geometry", "vehicles"), "ray_type", "body melee", "report")
 
 			if not obstructed_by_geometry then
-				if not (attention.unit:base().is_local_player or attention.unit:base().is_husk_player) then --ignore shield status of it is player
-					local target_has_shield = alive(attention.unit:inventory() and attention.unit:inventory()._shield_unit)  and true or nil
-					local target_is_covered_by_shield = self._unit:raycast("ray", shoot_from_pos, melee_vec1, "sphere_cast_radius", 20, "slot_mask", self._shield_slotmask, "ray_type", "body melee", "report")
-				else
-					local target_has_shield = false
-					local target_is_covered_by_shield = false
-				end
+				local target_has_shield = alive(attention.unit:inventory() and attention.unit:inventory()._shield_unit)  and true or nil
+				local target_is_covered_by_shield = self._unit:raycast("ray", shoot_from_pos, melee_vec1, "sphere_cast_radius", 20, "slot_mask", self._shield_slotmask, "ray_type", "body melee", "report")
 				
 				if autotarget then
 					if not target_is_covered_by_shield then
