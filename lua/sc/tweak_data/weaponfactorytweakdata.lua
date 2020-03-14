@@ -46296,13 +46296,14 @@ self.wpn_fps_ass_osipr.uses_parts = {
 	if self.parts.mod_shield then --Mx's Predator Shield mod ver.
 		self.parts.mod_shield.stats = {
 			concealment = -15,
-			extra_ammo = -6, --temporary measure to reduce mag size. Multiplier would be much better
 			suppression = 0,
 			spread = 1,
-			recoil = 2,
-			zoom = 4
+			recoil = 2
+			--zoom = 4 zoom has to be different based on gun possibly
 		}
-		self.parts.mod_shield.exclude_weapon = {"mp5"}
+		self.wpn_fps_smg_x_mp5.override = {
+			mod_shield.stats.zoom = 2
+		}
 	end
 
 	--Incendiary Slugs are awesome--
