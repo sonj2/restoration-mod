@@ -46301,9 +46301,6 @@ self.wpn_fps_ass_osipr.uses_parts = {
 			recoil = 2
 			--zoom = 4 zoom has to be different based on gun possibly
 		}
-		self.wpn_fps_smg_x_mp5.override = {
-			mod_shield.stats.zoom = 2
-		}
 	end
 
 	--Incendiary Slugs are awesome--
