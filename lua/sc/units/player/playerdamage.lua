@@ -335,7 +335,7 @@ function PlayerDamage:damage_bullet(attack_data, ...)
 						if (self._unit:movement():stamina() > 0) then
 							if (self._unit:movement():crouching()) then
 								self._unit:movement():subtract_stamina(attack_data.damage * 0.2)
-								--self._unit:movement():_restart_stamina_regen_timer()
+								self._unit:movement():_restart_stamina_regen_timer()
 							else
 								self._unit:movement():subtract_stamina(attack_data.damage * 0.3)
 								self._unit:movement():_restart_stamina_regen_timer()
