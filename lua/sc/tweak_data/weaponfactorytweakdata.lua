@@ -46301,7 +46301,7 @@ self.wpn_fps_ass_osipr.uses_parts = {
 			recoil = 2,
 			zoom = 4
 		}
-		self.parts.mod_shield.override_weapon_multiply = {CLIP_AMMO_MAX = 0.5}
+		--self.parts.mod_shield.override_weapon_multiply = {CLIP_AMMO_MAX = 0.5}
 	end
 
 	--Incendiary Slugs are awesome--
