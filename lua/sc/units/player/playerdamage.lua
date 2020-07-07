@@ -680,8 +680,8 @@ function PlayerDamage:damage_bullet(attack_data, ...)
 		end
 	end
 	
-	if tweak_data.weapon.predatorshield then
-		if self._unit:inventory():check_player_shield() and attack_data and attack_data.col_ray.position and not self._unit:_is_interacting() then --shield mechanic
+	if tweak_data.weapon.predatorshield then --shield mechanic
+		if self._unit:inventory():check_player_shield() and attack_data and attack_data.col_ray.position and not self._unit:_is_interacting() then 
 			local ply_camera = managers.player:player_unit():camera()
 			local target_vec = attack_data.col_ray.position - ply_camera:position()
 			local angle = target_vec:to_polar_with_reference(ply_camera:forward(), math.UP).spin

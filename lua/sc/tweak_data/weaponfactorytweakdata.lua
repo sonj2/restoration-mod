@@ -30938,9 +30938,6 @@ if self.wpn_fps_smg_czevo then 	--Gambyt's Scorpion EVO
 				recoil = 2
 				--zoom = 4 zoom has to be different based on gun possibly
 			}
-			self.wpn_fps_smg_x_mp5.override = {
-				mod_shield.stats.zoom = 2
-			}
 		end
 		
 >>>>>>> Reworked Damage reduction mech
