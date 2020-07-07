@@ -30938,7 +30938,7 @@ if self.wpn_fps_smg_czevo then 	--Gambyt's Scorpion EVO
 				recoil = 2,
 				zoom = 4
 			}
-			self.parts.mod_shield.override_weapon_multiply = {CLIP_AMMO_MAX = 0.5}
+			--self.parts.mod_shield.override_weapon_multiply = {CLIP_AMMO_MAX = 0.5}
 		end
 		
 >>>>>>> Reworked Damage reduction mech

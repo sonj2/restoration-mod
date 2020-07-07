@@ -744,6 +744,13 @@ function NewRaycastWeaponBase:calculate_ammo_max_per_clip()
 	if not self:upgrade_blocked(tweak_data.weapon[self._name_id].category, "clip_ammo_increase") then
 		ammo = ammo * managers.player:upgrade_value(tweak_data.weapon[self._name_id].category, "clip_ammo_increase", 1)
 	end
+	--[[Halving override for shield since WeaponLib multipliers do not work]]--
+	if tweak_data.weapon.predatorshield then
+		if self:is_category("akimbo") and managers.player:player_unit():inventory():akimbo_shield_check()then
+				--log("akimbo shield ammo / 2")
+				ammo = ammo / 2
+		end
+	end
 	ammo = math.floor(ammo)
 	return ammo
 end
