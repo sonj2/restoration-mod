@@ -30935,9 +30935,10 @@ if self.wpn_fps_smg_czevo then 	--Gambyt's Scorpion EVO
 				concealment = -15,
 				suppression = 0,
 				spread = 1,
-				recoil = 2
-				--zoom = 4 zoom has to be different based on gun possibly
+				recoil = 2,
+				zoom = 4
 			}
+			self.parts.mod_shield.override_weapon_multiply = {CLIP_AMMO_MAX = 0.5}
 		end
 		
 >>>>>>> Reworked Damage reduction mech

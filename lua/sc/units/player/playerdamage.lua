@@ -680,7 +680,7 @@ function PlayerDamage:damage_bullet(attack_data, ...)
 		end
 	end
 	
-	if tweak_data.weapon.predatorshield then --shield mechanic
+	iif tweak_data.weapon.predatorshield then --shield mechanic
 		if self._unit:inventory():check_player_shield() and attack_data and attack_data.col_ray.position and not self._unit:_is_interacting() then 
 			local ply_camera = managers.player:player_unit():camera()
 			local target_vec = attack_data.col_ray.position - ply_camera:position()
@@ -691,7 +691,7 @@ function PlayerDamage:damage_bullet(attack_data, ...)
 						if (self._unit:movement():stamina() > 0) then
 							if (self._unit:movement():crouching()) then
 								self._unit:movement():subtract_stamina(attack_data.damage * 0.2)
-								--self._unit:movement():_restart_stamina_regen_timer()
+								self._unit:movement():_restart_stamina_regen_timer()
 							else
 								self._unit:movement():subtract_stamina(attack_data.damage * 0.3)
 								self._unit:movement():_restart_stamina_regen_timer()
