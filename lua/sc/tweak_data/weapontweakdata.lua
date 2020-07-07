@@ -9715,7 +9715,26 @@ if self.hpb then --Gambyt's Browning HP
 	}
 	self.hpb.stats_modifiers = nil
 	self.hpb.panic_suppression_chance = 0.0
-end	
+end
+
+if self.predatorshield then --Mx's Predator Shield as standalone weapons
+	self.predatorshield.stats.damage = 60
+	self.predatorshield.stats.spread = 10
+	self.predatorshield.stats.recoil = 10
+	self.predatorshield.stats.zoom = 4
+	self.predatorshield.stats.concealment = 12
+	self.predatorshield.stats.suppression = 20
+	self.predatorshield.stats.alert_size = 20
+end
+if self.predatorshield_secondary then
+	self.predatorshield_secondary.stats.damage = 60
+	self.predatorshield_secondary.stats.spread = 10
+	self.predatorshield_secondary.stats.recoil = 10
+	self.predatorshield_secondary.stats.zoom = 4
+	self.predatorshield_secondary.stats.concealment = 12
+	self.predatorshield_secondary.stats.suppression = 20
+	self.predatorshield_secondary.stats.alert_size = 20
+end
 
 if self.toym16 then --Gambyt's Toy M16
 	self.toym16.CLIP_AMMO_MAX = 150

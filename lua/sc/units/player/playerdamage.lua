@@ -680,6 +680,21 @@ function PlayerDamage:damage_bullet(attack_data, ...)
 		end
 	end
 	
+	if self._unit:inventory():check_shield_unit() and attack_data and attack_data.col_ray.position then --shield mechanic
+		local ply_camera = managers.player:player_unit():camera()
+		local target_vec = attack_data.col_ray.position - ply_camera:position()
+		local angle = target_vec:to_polar_with_reference(ply_camera:forward(), math.UP).spin
+		if self._unit:inventory():akimbo_shield_enabled() then
+			if (120 <= angle and angle <= 180) or (-180 <= angle and angle <= -120) then --120° Protection
+				attack_data.damage = 0.0001
+			end
+		else
+			if (90 <= angle and angle <= 180) or (-180 <= angle and angle <= -90) then
+				attack_data.damage = 0.0001
+			end
+		end
+	end
+
 	self:fill_dodge_meter(self._dodge_points) --Getting attacked fills your dodge meter by your dodge stat.
 	if self._dodge_meter >= 1.0 then --Dodge attacks if your meter is at '100'.
 		self._unit:sound():play("pickup_fak_skill") --PLEASE PLEASE PLEASE REPLACE WITH BETTER SOUND IN THE FUTURE!!!

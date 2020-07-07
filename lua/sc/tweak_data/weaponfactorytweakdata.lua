@@ -30891,6 +30891,16 @@ if self.wpn_fps_smg_czevo then 	--Gambyt's Scorpion EVO
 			}
 		}
 	end
+
+	if self.parts.mod_shield then --Mx's Predator Shield mod ver.
+		self.parts.mod_shield.stats = {
+			concealment = -15,
+			extra_ammo = -6, --temporary measure to reduce mag size. Multiplier would be much better
+			suppression = 0,
+			spread = 1,
+			recoil = 2
+		}
+	end
 --Resmod Custom Weapon stuff
 
 --Raze's Fury
