@@ -30812,7 +30812,6 @@ if self.wpn_fps_smg_czevo then 	--Gambyt's Scorpion EVO
 			value = 7
 		}
 
-<<<<<<< gold
 		self.wpn_fps_shot_minibeck.override = {
 			wpn_fps_upg_a_slug = {
 				supported = true,
@@ -30896,52 +30895,12 @@ if self.wpn_fps_smg_czevo then 	--Gambyt's Scorpion EVO
 	if self.parts.mod_shield then --Mx's Predator Shield mod ver.
 		self.parts.mod_shield.stats = {
 			concealment = -15,
-			extra_ammo = -6, --temporary measure to reduce mag size. Multiplier would be much better
 			suppression = 0,
 			spread = 1,
-			recoil = 2
+			recoil = 2,
+			zoom = 4
 		}
 	end
-=======
-	if self.parts.wpn_fps_upg_o_okp7_dove then --Pawcio's Russian Sight Pack 
-		self.parts.wpn_fps_upg_o_okp7_dove.stats = {
-			value = 3,
-			zoom = 2	
-			}	
-		self.parts.wpn_fps_upg_o_pso1.stats = {
-			value = 8,
-			zoom = 40
-			}				
-		self.parts.wpn_fps_upg_o_pso1_rifle.stats = {
-			value = 8,
-			zoom = 40
-			}	
-		self.parts.wpn_fps_upg_o_1pn93.stats = {
-			value = 8,
-			zoom = 30
-			}	
-		self.parts.wpn_fps_upg_o_ekp_1s_03.stats = {
-			value = 3,
-			zoom = 2	
-			}									
-		self.parts.wpn_fps_upg_o_1p29.stats = {
-			value = 8,
-			zoom = 30
-			}															
-		end	
-		
-		if self.parts.mod_shield then --Mx's Predator Shield mod ver.
-			self.parts.mod_shield.stats = {
-				concealment = -15,
-				suppression = 0,
-				spread = 1,
-				recoil = 2,
-				zoom = 4
-			}
-			--self.parts.mod_shield.override_weapon_multiply = {CLIP_AMMO_MAX = 0.5}
-		end
-		
->>>>>>> Reworked Damage reduction mech
 --Resmod Custom Weapon stuff
 
 --Raze's Fury
